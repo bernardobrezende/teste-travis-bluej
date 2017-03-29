@@ -15,16 +15,12 @@
 
   <target name="compile">
     <mkdir dir="${main.build.dir}"/>
-    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
-      <classpath refid="classpath.base"/>
-    </javac>
+    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false" classpath="lib/junit-4.11.jar"/>
   </target>
 
   <target name="test-compile" depends="compile">
     <mkdir dir="${test.build.dir}"/>
-    <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false">
-        <classpath refid="classpath.test"/>
-    </javac>
+    <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false" classpath="lib/junit-4.11.jar"/>
   </target>
 
   <target name="test" depends="test-compile">
