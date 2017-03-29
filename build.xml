@@ -11,14 +11,14 @@
     <pathelement location="${main.build.dir}"/>
   </path>
 
-  <path id="junitclasspath" location="/lib/junit-4.11.jar" />
+  <!-- <path id="junitclasspath" location="/lib/junit-4.11.jar" /> -->
 
   <target name="compile">
     <mkdir dir="${main.build.dir}"/>
     <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
       <classpath>
         <path refid="classpath.test"/>
-        <path refid="junitclasspath"/>
+        <!-- <path refid="junitclasspath"/> -->
       </classpath>
     </javac>
   </target>
@@ -28,7 +28,7 @@
     <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false">
       <classpath>
         <path refid="classpath.test"/>
-        <path refid="junitclasspath"/>
+        <!-- <path refid="junitclasspath"/> -->
       </classpath>
     </javac>
   </target>
@@ -37,7 +37,7 @@
     <junit printsummary="on" haltonfailure="yes" fork="true">
         <classpath>
           <path refid="classpath.test"/>
-          <path refid="junitclasspath"/>
+          <!-- <path refid="junitclasspath"/> -->
           <pathelement location="${test.build.dir}"/>
         </classpath>
         <formatter type="brief" usefile="false" />
