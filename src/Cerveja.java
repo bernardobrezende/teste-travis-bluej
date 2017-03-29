@@ -8,5 +8,11 @@ public class Cerveja {
             throw new Exception("Muito fraca!");
         }
         this.nome = nome;
+        this.estilo = estilo;
+        this.ibu = ibu;
+    }
+    
+    public int getIBU() {
+        return this.ibu;
     }
 }
