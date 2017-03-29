@@ -13,6 +13,6 @@ public class CervejaTest {
     @Test
     public void criarCervejaIpaIbuAlto() throws Exception {
         Cerveja ipa = new Cerveja("Hoparama IPA", "IPA", 83);
-        assertEquals(81, ipa.getIBU());
+        assertEquals(83, ipa.getIBU());
     }
 }
