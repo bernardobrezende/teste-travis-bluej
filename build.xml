@@ -13,6 +13,8 @@
     <path refid="classpath.base" />
   </path>
 
+  <path id="junitclasspath" location="/lib/junit-4.11.jar" />
+
   <target name="compile">
     <mkdir dir="${main.build.dir}"/>
     <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false" classpath="lib/junit-4.11.jar"/>
@@ -27,9 +29,7 @@
     <junit printsummary="on" haltonfailure="yes" fork="true">
         <classpath>
           <path refid="classpath.test"/>
-          <fileset dir="${junit.dir}">
-            <include name="lib/junit-4.11.jar" />
-          </fileset>
+          <path refid="junitclasspath"/>
           <pathelement location="${test.build.dir}"/>
         </classpath>
         <formatter type="brief" usefile="false" />
