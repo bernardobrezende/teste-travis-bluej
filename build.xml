@@ -28,7 +28,7 @@
         <classpath>
           <path refid="classpath.test"/>
           <fileset dir="${junit.dir}">
-            <include name="**/junit-4.11.jar" />
+            <include name="lib/junit-4.11.jar" />
           </fileset>
           <pathelement location="${test.build.dir}"/>
         </classpath>
