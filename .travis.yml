@@ -1,4 +1,4 @@
 language: java
-script: ant test -lib /lib/junit-4.11.jar -buildfile build.xml
+#script: ant test -lib /lib/junit-4.11.jar -buildfile build.xml
 jdk:
   - oraclejdk8
