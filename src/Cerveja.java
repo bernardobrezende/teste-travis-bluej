@@ -4,7 +4,7 @@ public class Cerveja {
     private int ibu;
     
     public Cerveja(String nome, String estilo, int ibu) throws Exception {
-        if (!estilo.equals("IPA") || ibu < 50) {
+        if (estilo.equals("IPA") || ibu < 50) {
             throw new Exception("Muito fraca!");
         }
         this.nome = nome;
